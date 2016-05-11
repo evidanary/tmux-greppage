@@ -3,6 +3,7 @@
 DEFAULT_COLORIZE=true
 DEFAULT_PANE_SIZE=55
 DEFAULT_SPLIT_DIRECTION="vertical"
+DEFAULT_SHOW_COPY_MODE_HELP=true
 
 # Function accepts 2 arguments
 # param 1: the variable to fetch
@@ -14,7 +15,7 @@ getTmuxOption () {
 }
 
 COLORIZE=$(getTmuxOption "@greppage-colorize" $DEFAULT_COLORIZE)
-if [ "$COLORIZE" = true ] ; then
+if [ "$COLORIZE" == true ] ; then
   COLORIZE="-c"
 else
   COLORIZE=""
@@ -29,5 +30,11 @@ else
   SPLIT_DIRECTION="-h"
 fi
 
-tmux command-prompt -p search_topic "split-window ${SPLIT_DIRECTION} -l ${PANE_SIZE} 'grepg ${COLORIZE} -t %1 && read'"
+COPY_MODE_HELP=$(getTmuxOption "@greppage-show-copy-mode-help" $DEFAULT_SHOW_COPY_MODE_HELP)
+if [ "$COPY_MODE_HELP" == true ] ; then
+  COPY_MODE_HELP="Shortcuts \=\>  Copy Mode:\"<Prefix>+[\", Select:V, Yank:y, Paste:\"<Prefix>+]\""
+else
+  COPY_MODE_HELP=""
+fi
+tmux command-prompt -p search_topic "split-window ${SPLIT_DIRECTION} -l ${PANE_SIZE} 'grepg ${COLORIZE} -t %1 && echo ${COPY_MODE_HELP} && read'"
 
