@@ -3,7 +3,7 @@ tmux-greppage
 
 tmux-greppage is a TMUX plugin for querying your [ GrepPage ](https://www.greppage.com) cheatsheets. It acts as a simple wrapper around [grepg](https://github.com/evidanary/grepg) commandline client.
 
-![tmux-greppage](http://i.imgur.com/C1XInnc.gifv)
+![tmux-greppage](http://i.imgur.com/C1XInnc.gif)
 
 # Usage
 `Prefix + g` will prompt you to enter a search string. After entering the string, a new vertical split will be created with relevant search results from your cheatsheet.
