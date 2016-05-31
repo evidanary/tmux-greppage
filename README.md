@@ -17,7 +17,7 @@ To copy/paste the cheat enter TMUX copy mode (defaults to `Prefix + [` and paste
  - [grepg](https://github.com/evidanary/grepg) 0.0.4+
  - tmux 2.1+
 
-# Installation
+# Installation and Update
 
 ## Using [Tmux Plugin Manager](https://github.com/tmux-plugins/tpm)
 
@@ -27,8 +27,9 @@ Add the following to your list of TPM plugins in `.tmux.conf`:
 set -g @plugin 'evidanary/tmux-greppage'
 ```
 
-Hit `Prefix + I` to fetch and source the plugin. You should now be able to use
-the plugin!
+Hit `Prefix + I` to fetch and source the plugin. You should now be able to use the plugin!
+
+**NOTE**: To update your plugin hit `Prefix + U`. This project is expected to go through heavy changes, so periodic updates may be necessary.
 
 # Configuration
 You can set the following options in the ~/.tmux.conf file to customize.
