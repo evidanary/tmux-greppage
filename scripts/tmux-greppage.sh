@@ -36,5 +36,5 @@ if [ "$COPY_MODE_HELP" == true ] ; then
 else
   COPY_MODE_HELP=""
 fi
-tmux command-prompt -p search_topic "split-window ${SPLIT_DIRECTION} -l ${PANE_SIZE} 'grepg ${COLORIZE} -t %1 && echo ${COPY_MODE_HELP} && read'"
+tmux command-prompt -p search_topic "split-window ${SPLIT_DIRECTION} -l ${PANE_SIZE} 'grepg ${COLORIZE} -t %1 ; echo ${COPY_MODE_HELP} ; read'"
 
