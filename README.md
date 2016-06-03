@@ -75,3 +75,5 @@ For accessing OSX's clipboard from tmux run `brew install reattach-to-user-names
 set-option -g default-command "reattach-to-user-namespace -l zsh"
 ```
 
+#License
+tmux-greppage is under the [MIT License](http://www.opensource.org/licenses/MIT).
