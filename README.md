@@ -1,7 +1,7 @@
 tmux-greppage
 ===
 
-tmux-greppage is a TMUX plugin for querying your [ GrepPage ](https://www.greppage.com) cheatsheets. It acts as a simple wrapper around [grepg](https://github.com/evidanary/grepg) commandline client.
+tmux-greppage is a TMUX plugin for querying your [ GrepPage ](https://www.greppage.com) cheatsheets. It acts as a simple wrapper around [grepg](https://github.com/tejal29/grepg) commandline client.
 
 ![tmux-greppage](http://i.imgur.com/C1XInnc.gif)
 
@@ -14,7 +14,7 @@ To copy/paste the cheat enter TMUX copy mode (defaults to `Prefix + [` and paste
 
 # Requirements
  - bash
- - [grepg](https://github.com/evidanary/grepg) 0.0.4+
+ - [grepg](https://github.com/tejal29/grepg)
  - tmux 2.1+
 
 # Installation and Update
